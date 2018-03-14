@@ -9,6 +9,7 @@ class LocationSpec extends Specification {
 
     def setup() {
         locationFacade = new LocationConfig().locationFacade()
+        locationFacade.saveUserLocation("TestKristi", "200", "100")
     }
 
     def "'showUserLocation' method should return not null location which contains longitude and latitude for correct username"() {

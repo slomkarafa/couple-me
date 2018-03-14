@@ -14,4 +14,12 @@ public class LocationFacade {
 
         return locationBrowser.searchForUserLocation(username);
     }
+
+    public void saveUserLocation(String username, String longitude, String latitude) {
+        Objects.requireNonNull(username, "Username cannot be null");
+        Objects.requireNonNull(longitude, "Longitude cannot be null");
+        Objects.requireNonNull(latitude, "Latitude cannot be null");
+
+        locationBrowser.addUserLocation(new LocationDto(username, latitude, longitude));
+    }
 }

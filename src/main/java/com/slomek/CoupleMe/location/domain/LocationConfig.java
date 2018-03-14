@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class LocationConfig {
+class LocationConfig {
 
     @Bean
     LocationFacade locationFacade(LocationBrowser locationBrowser){
